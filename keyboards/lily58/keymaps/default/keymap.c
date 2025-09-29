@@ -5,6 +5,8 @@
 extern rgblight_config_t rgblight_config;
 #endif
 
+#include "keymap_french.h"
+
 enum layer_number {
   _QWERTY = 0,
   _LOWER,
@@ -74,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-  _______, KC_CIRC,  KC_LT,   KC_GT, KC_DLR, KC_PERC,                        KC_AT,    KC_AMPR,    KC_ASTR,    KC_QUOT,    KC_GRV,    _______,
-  _______,  KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR,  KC_EQL,                     KC_BSLS, KC_PLUS, KC_MINS, KC_SLSH,   KC_DQUO, _______,
-  _______,   KC_TILD, KC_LBRC, KC_RBRC,  KC_UNDS, KC_HASH,   _______, _______,  KC_PIPE, KC_EXLM, KC_SCLN,  KC_COLN, KC_QUES, _______,
+  _______, FR_CIRC,  FR_LABK,   FR_RABK, FR_DLR, FR_PERC,                        FR_AT,    FR_AMPR,    FR_ASTR,    FR_QUOT,    FR_GRV,    _______,
+  _______,  FR_LCBR, FR_LPRN, FR_RPRN, FR_RCBR,  FR_EQL,                     FR_BSLS, FR_PLUS, FR_MINS, FR_SLSH,   FR_DQUO, _______,
+  _______,   FR_TILD, FR_LBRC, FR_RBRC,  FR_UNDS, FR_HASH,   _______, _______,  FR_PIPE, FR_EXLM, FR_SCLN,  FR_COLN, FR_QUES, _______,
                              _______, _______, _______,  _______, _______,  _______, _______, _______
 ),
 /* ADJUST
