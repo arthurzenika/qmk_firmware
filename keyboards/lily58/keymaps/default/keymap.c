@@ -138,6 +138,9 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 // When you add source files to SRC in rules.mk, you can use functions.
 const char *read_layer_state(void);
+#ifdef RGBLIGHT_ENABLE
+const char *read_rgb_info(void);
+#endif
 const char *read_logo(void);
 void set_keylog(uint16_t keycode, keyrecord_t *record);
 const char *read_keylog(void);
@@ -154,6 +157,9 @@ bool oled_task_user(void) {
     oled_write_ln(read_layer_state(), false);
     oled_write_ln(read_keylog(), false);
     oled_write_ln(read_keylogs(), false);
+#ifdef RGBLIGHT_ENABLE
+    oled_write_ln(read_rgb_info(), false);
+#endif 
     //oled_write_ln(read_mode_icon(keymap_config.swap_lalt_lgui), false);
     //oled_write_ln(read_host_led_state(), false);
     //oled_write_ln(read_timelog(), false);
