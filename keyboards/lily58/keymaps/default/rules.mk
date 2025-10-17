@@ -11,6 +11,8 @@ AUDIO_ENABLE = no           # Audio output
 #WS2812_DRIVER_REQUIRED = yes
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_ENABLE = yes           # OLED display
+#WIP 
+#CONSOLE_ENABLE = yes
 
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./lib/rgb_state_reader.c \

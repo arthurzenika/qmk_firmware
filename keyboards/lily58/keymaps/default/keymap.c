@@ -153,5 +153,12 @@ void keyboard_post_init_user(void) {
 #if defined(RGBLIGHT_ENABLE)
         rgblight_enable_noeeprom();
 #endif
+#if defined(CONSOLE_ENABLE)
+  // Customise these values to desired behaviour
+  debug_enable=true;
+  debug_matrix=true;
+  //debug_keyboard=true;
+  //debug_mouse=true;
+#endif
   }
 }
