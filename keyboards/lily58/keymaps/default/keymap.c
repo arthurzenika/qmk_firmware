@@ -2,6 +2,7 @@
 
 enum layer_number {
   _QWERTY = 0,
+  _ERGOL,
   _LOWER,
   _RAISE,
   _ADJUST,
@@ -17,6 +18,30 @@ enum layer_number {
 #define HOME_K RSFT_T(KC_K)  // K acts as Shift when held
 #define HOME_L RALT_T(KC_L)  // L acts as Alt when held
 #define HOME_SCLN RGUI_T(KC_SCLN)  // ; acts as GUI (Cmd/Win) when held
+
+#define HOME_BSPC LSFT_T(KC_BSPC) // BackSpc thumbs acts as Shift when held
+
+
+// ergol homerow
+//#define NA_SPC  LT(_NAV, KC_SPC)
+#define SH_BSPC MT(MOD_LSFT, KC_BSPC)
+//#define AL_ENT  LT(_ALT, KC_ENT)
+
+#define LS_A LSFT_T(KC_A)
+#define LG_S LGUI_T(KC_S)
+#define LA_E LALT_T(KC_E)
+#define LC_N LCTL_T(KC_N)
+#define RC_R RCTL_T(KC_R)
+#define RA_T RALT_T(KC_T)
+#define RG_I RGUI_T(KC_I)
+#define RS_U RSFT_T(KC_U)
+
+enum my_keycodes {
+  MY_ATRE = SAFE_RANGE,
+  MY_STAR,
+  MY_SWTC,
+  MY_RST
+};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -41,8 +66,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
   KC_LSFT,  HOME_A, HOME_S,  HOME_D,  HOME_F,  KC_G,                     KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
   KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_LBRC,  KC_RBRC,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_ENT,
-                        KC_LALT, MO(_LOWER), KC_BSPC, KC_BSPC, KC_SPC, KC_ENT, MO(_RAISE), KC_ALGR
+                        KC_LALT, MO(_LOWER), HOME_BSPC, HOME_BSPC, KC_SPC, KC_ENT, MO(_RAISE), KC_ALGR
 ),
+
+
+  /* Ergol
+    *
+    * ,----------------------------------. ,----------------------------------.
+    * |   Q  |   C  |   O  |   P  |   W  | |   J  |   M  |   D  | str  |   Y  |
+    * |------+------+------+------+------| |------+------+------+------+------|
+    * |   A  |   S  |   E  |   N  |   F  | |   L  |   R  |   T  |   I  |   U  |
+    * |------+------+------+------+------| |------+------+------+------+------|
+    * |   Z  |   X  |   -  |   V  |   B  | |   .  |   H  |   G  |   ,  |   K  |
+    * `-------------+--------------------' `----------------------------------'
+    *             ,--------------------.    ,--------------------.
+    *             | LGUI | BSpc |Space |    |Space |Enter | RGUI |
+    *             `--------------------'    `--------------------.
+    */
+
+  // Default config uses home row mods. So hold each of the keys on the home
+  // row to use ctrl, gui, alt, or shift
+  [_ERGOL] = LAYOUT(
+  _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
+  _______, KC_Q,    KC_C,    KC_O,    KC_P,    KC_W,                        KC_J,   KC_M,     KC_D,   MY_STAR,   KC_Y, _______,
+  _______, LS_A, LG_S, LA_E, LC_N,    KC_F,                                 KC_L, RC_R,   RA_T,   RG_I,    RS_U, _______,
+  _______, KC_Z, KC_X, KC_MINS, KC_V,    KC_B,  _______, _______,           KC_DOT, KC_H,   KC_G,   KC_COMM, KC_K, _______,
+                  _______, MO(_LOWER),  SH_BSPC, HOME_BSPC, KC_SPC, KC_ENT, MO(_RAISE), _______
+  ),
+
+
+
 // KC_LGUI to readd
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
