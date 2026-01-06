@@ -43,6 +43,123 @@ enum my_keycodes {
   MY_RST
 };
 
+#define EL_GRV  KC_GRV  // `
+#define EL_1    KC_1    // 1
+#define EL_2    KC_2    // 2
+#define EL_3    KC_3    // 3
+#define EL_4    KC_4    // 4
+#define EL_5    KC_5    // 5
+#define EL_6    KC_6    // 6
+#define EL_7    KC_7    // 7
+#define EL_8    KC_8    // 8
+#define EL_9    KC_9    // 9
+#define EL_0    KC_0    // 0
+#define EL_SLSH KC_MINS // /
+#define EL_EQL  KC_EQL  // =
+#define EL_Q    KC_Q    // Q
+#define EL_C    KC_W    // C
+#define EL_O    KC_E    // O
+#define EL_P    KC_R    // P
+#define EL_W    KC_T    // W
+#define EL_J    KC_Y    // J
+#define EL_M    KC_U    // M
+#define EL_D    KC_I    // D
+#define EL_1DK  KC_O    // ★ (one dead key)
+#define EL_Y    KC_P    // Y
+#define EL_LBRC KC_LBRC // [
+#define EL_RBRC KC_RBRC // ]
+#define EL_A    KC_A    // A
+#define EL_S    KC_S    // S
+#define EL_E    KC_D    // E
+#define EL_N    KC_F    // N
+#define EL_F    KC_G    // F
+#define EL_L    KC_H    // L
+#define EL_R    KC_J    // R
+#define EL_T    KC_K    // T
+#define EL_I    KC_L    // I
+#define EL_U    KC_SCLN // U
+#define EL_QUOT KC_QUOT // '
+#define EL_BSLS KC_BSLS // (backslash)
+#define EL_LABK KC_NUBS // <
+#define EL_Z    KC_Z    // Z
+#define EL_X    KC_X    // X
+#define EL_MINS KC_C    // -
+#define EL_V    KC_V    // V
+#define EL_B    KC_B    // B
+#define EL_DOT  KC_N    // .
+#define EL_H    KC_M    // H
+#define EL_G    KC_COMM // G
+#define EL_COMM KC_DOT  // ,
+#define EL_K    KC_SLSH // K
+#define EL_TILD S(EL_GRV)  // ~
+#define EL_EURO S(EL_1)    // €
+#define EL_LDAQ S(EL_2)    // «
+#define EL_RDAQ S(EL_3)    // »
+#define EL_DLR  S(EL_4)    // $
+#define EL_PERC S(EL_5)    // %
+#define EL_CIRC S(EL_6)    // ^
+#define EL_AMPR S(EL_7)    // &
+#define EL_ASTR S(EL_8)    // *
+#define EL_HASH S(EL_9)    // #
+#define EL_AT   S(EL_0)    // @
+#define EL_UNDS S(EL_SLSH) // _
+#define EL_PLUS S(EL_EQL)  // +
+#define EL_EXLM S(EL_1DK)  // !
+#define EL_LCBR S(EL_LBRC) // {
+#define EL_RCBR S(EL_RBRC) // }
+#define EL_DQUO S(EL_QUOT) // "
+#define EL_PIPE S(EL_BSLS) // |
+#define EL_RABK S(EL_LABK) // >
+#define EL_QUES S(EL_MINS) // ?
+#define EL_COLN S(EL_DOT)  // :
+#define EL_SCLN S(EL_COMM) // ;
+#define EL_NNBS S(KC_SPC)  // (narrow non-breaking space)
+#define EL_SUB1 ALGR(EL_1)    // ₁
+#define EL_SUB2 ALGR(EL_2)    // ₂
+#define EL_SUB3 ALGR(EL_3)    // ₃
+#define EL_SUB4 ALGR(EL_4)    // ₄
+#define EL_SUB5 ALGR(EL_5)    // ₅
+#define EL_SUB6 ALGR(EL_6)    // ₆
+#define EL_SUB7 ALGR(EL_7)    // ₇
+#define EL_SUB8 ALGR(EL_8)    // ₈
+#define EL_SUB9 ALGR(EL_9)    // ₉
+#define EL_SUB0 ALGR(EL_0)    // ₀
+#define EL_LPRN ALGR(EL_S)    // (
+#define EL_RPRN ALGR(EL_E)    // )
+#define EL_SUP1 S(ALGR(EL_1))    // ¹
+#define EL_SUP2 S(ALGR(EL_2))    // ²
+#define EL_SUP3 S(ALGR(EL_3))    // ³
+#define EL_SUP4 S(ALGR(EL_4))    // ⁴
+#define EL_SUP5 S(ALGR(EL_5))    // ⁵
+#define EL_SUP6 S(ALGR(EL_6))    // ⁶
+#define EL_SUP7 S(ALGR(EL_7))    // ⁷
+#define EL_SUP8 S(ALGR(EL_8))    // ⁸
+#define EL_SUP9 S(ALGR(EL_9))    // ⁹
+#define EL_SUP0 S(ALGR(EL_0))    // ⁰
+#define EL_DCIR S(ALGR(EL_Q))    // ^ (dead)
+#define EL_LEQL S(ALGR(EL_C))    // ≤
+#define EL_GEQL S(ALGR(EL_O))    // ≥
+#define EL_CURR S(ALGR(EL_P))    // ¤ (dead)
+#define EL_PERM S(ALGR(EL_W))    // ‰
+#define EL_RNGA S(ALGR(EL_J))    // ° (dead)
+#define EL_MUL  S(ALGR(EL_D))    // ×
+#define EL_ACUT S(ALGR(EL_1DK))  // ´ (dead)
+#define EL_DGRV S(ALGR(EL_Y))    // ` (dead)
+#define EL_CARN S(ALGR(EL_A))    // ˇ (dead)
+#define EL_DOTA S(ALGR(EL_N))    // ˙ (dead)
+#define EL_NEQL S(ALGR(EL_F))    // ≠
+#define EL_DSLS S(ALGR(EL_L))    // / (dead)
+#define EL_PLMN S(ALGR(EL_R))    // ±
+#define EL_MACR S(ALGR(EL_T))    // ¯ (dead)
+#define EL_DIV  S(ALGR(EL_I))    // ÷
+#define EL_DACU S(ALGR(EL_U))    // ” (dead)
+#define EL_DTIL S(ALGR(EL_Z))    // ~ (dead)
+#define EL_DCMM S(ALGR(EL_X))    // , (dead)
+#define EL_OGON S(ALGR(EL_MINS)) // ˛ (dead)
+#define EL_NOT  S(ALGR(EL_H))    // ¬
+#define EL_CEDL S(ALGR(EL_G))    // ¸ (dead)
+#define EL_BREV S(ALGR(EL_K))    // ˘ (dead)
+#define EL_NBSP S(ALGR(KC_SPC))  // (non-breaking space)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -132,13 +249,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
+
+// QWERTY VERSION
+// [_RAISE] = LAYOUT(
+//   _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
+//   _______, KC_CIRC,  KC_LT,   KC_GT, KC_DLR, KC_PERC,                        KC_AT,    KC_AMPR,    KC_ASTR,    KC_QUOT,    KC_GRV,    _______,
+//   _______,  KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR,  KC_EQL,                     KC_BSLS, KC_PLUS, KC_MINS, KC_SLSH,   KC_DQUO, _______,
+//   _______,   KC_TILD, KC_LBRC, KC_RBRC,  KC_UNDS, KC_HASH,   _______, _______,  KC_PIPE, KC_EXLM, KC_SCLN,  KC_COLN, KC_QUES, _______,
+//                              _______, _______, _______,  _______, _______,  _______, _______, _______
+// ),
+// ERGOL VERSION
 [_RAISE] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-  _______, KC_CIRC,  KC_LT,   KC_GT, KC_DLR, KC_PERC,                        KC_AT,    KC_AMPR,    KC_ASTR,    KC_QUOT,    KC_GRV,    _______,
-  _______,  KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR,  KC_EQL,                     KC_BSLS, KC_PLUS, KC_MINS, KC_SLSH,   KC_DQUO, _______,
-  _______,   KC_TILD, KC_LBRC, KC_RBRC,  KC_UNDS, KC_HASH,   _______, _______,  KC_PIPE, KC_EXLM, KC_SCLN,  KC_COLN, KC_QUES, _______,
+  _______, EL_CIRC,  EL_LABK,   EL_RABK, EL_DLR, EL_PERC,                        EL_AT,    EL_AMPR,    EL_ASTR,    EL_QUOT,    EL_GRV,    _______,
+  _______,  EL_LCBR, EL_LPRN, EL_RPRN, EL_RCBR,  EL_EQL,                     EL_BSLS, EL_PLUS, EL_MINS, EL_SLSH,   EL_DQUO, _______,
+  _______,   EL_TILD, EL_LBRC, EL_RBRC,  EL_UNDS, EL_HASH,   _______, _______,  EL_PIPE, EL_EXLM, EL_SCLN,  EL_COLN, EL_QUES, _______,
                              _______, _______, _______,  _______, _______,  _______, _______, _______
 ),
+
+
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
